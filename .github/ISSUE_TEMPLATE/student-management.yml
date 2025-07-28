@@ -1,0 +1,153 @@
+name: 👥 Student Management Request
+description: Request help with student registrations, rosters, or student-related issues
+title: "[STUDENT] "
+labels: ["student-management", "support"]
+assignees: ["copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for requests related to managing student registrations, solving student issues, 
+        or getting help with student-related functionality in the system.
+
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Type of Student Management Request
+      description: What kind of help do you need?
+      options:
+        - Add student to activity (manual registration)
+        - Remove student from activity
+        - Transfer student between activities
+        - View/export student roster for activity
+        - Fix student registration error
+        - Resolve duplicate registrations
+        - Handle oversubscribed activity
+        - Student account/email issues
+        - Bulk student operations
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: Which activity does this request relate to?
+      placeholder: "Example: Chess Club, Morning Fitness, Programming Class"
+    validations:
+      required: true
+
+  - type: textarea
+    id: student-details
+    attributes:
+      label: Student Information
+      description: Provide details about the student(s) involved
+      placeholder: |
+        Examples:
+        - Student email: john.doe@mergington.edu
+        - Student name: John Doe, Grade 10
+        - Multiple students: List all names and emails
+        - "Student forgot which email they used to register"
+        - "New transfer student needs to be added"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Detailed Description
+      description: Explain exactly what needs to be done or what problem needs to be solved
+      placeholder: |
+        Examples:
+        - "John accidentally registered twice for Chess Club - need to remove one registration"
+        - "Basketball Team is at capacity but star player wants to join - need to increase limit"
+        - "Sarah's email changed, need to update her registration from old to new email"
+        - "Need complete roster of Drama Club students for permission slip mailing"
+        - "Programming Class registration failed with error message, student couldn't join"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: How quickly does this need to be resolved?
+      options:
+        - Urgent (activity starts this week, immediate action needed)
+        - High (needed within 2-3 days)
+        - Medium (needed within 1 week)
+        - Low (can be handled when convenient)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-status
+    attributes:
+      label: Current Status
+      description: What is the current state of this student's registration?
+      placeholder: |
+        Examples:
+        - "Student shows as registered but says they can't access the activity"
+        - "Student is not in the system at all"
+        - "Student appears twice in the roster"
+        - "Registration shows as 'pending' for several days"
+        - "Student received confirmation email but teacher doesn't see them on roster"
+
+  - type: textarea
+    id: attempted-solutions
+    attributes:
+      label: What Have You Tried?
+      description: What steps have you already taken to resolve this?
+      placeholder: |
+        Examples:
+        - "Asked student to try registering again - same error occurred"
+        - "Checked if student was using correct email address"
+        - "Looked through all activity rosters to find duplicate"
+        - "Contacted IT department"
+        - "This is the first step I'm taking"
+
+  - type: input
+    id: deadline
+    attributes:
+      label: Important Deadline
+      description: Is there a specific date this needs to be resolved by?
+      placeholder: "Example: October 15 (activity starts), November 1 (permission slips due)"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Information
+      description: Any other relevant details?
+      placeholder: |
+        - Parent/guardian contact information if needed
+        - Special circumstances or accommodations
+        - Related issues with other students
+        - Communication preferences
+        - Authorization/permission details
+
+  - type: checkboxes
+    id: permissions
+    attributes:
+      label: Permissions and Authorization
+      description: Please confirm the following
+      options:
+        - label: I have permission to request changes for this student
+        - label: Student/parent has been informed of this request (if applicable)
+        - label: This change complies with school policies
+        - label: I have verified the student information is correct
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following
+      options:
+        - label: I have provided the student's correct information
+          required: true
+        - label: I have clearly described what action is needed
+          required: true
+        - label: I have indicated the urgency level appropriately
+          required: true
+        - label: I have the authority to make this request for this student
+          required: true
