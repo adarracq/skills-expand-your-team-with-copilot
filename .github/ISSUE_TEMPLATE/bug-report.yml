@@ -1,0 +1,117 @@
+name: 🐛 Bug Report
+description: Report a technical issue or problem with the system
+title: "[BUG] "
+labels: ["bug", "needs-investigation"]
+assignees: ["copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! This template will help us understand the issue and fix it quickly.
+        
+        **Before submitting:** Check if this issue has already been reported by searching existing issues.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: Provide a clear, concise summary of the bug
+      placeholder: "Example: Students cannot register for Morning Fitness activity"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: Describe exactly what is happening vs. what should happen
+      placeholder: |
+        What is happening:
+        - Specific error messages or unexpected behavior
+        - Which part of the system is affected
+        
+        What should happen instead:
+        - Expected behavior
+        - How it worked before (if it was working)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: System Area Affected
+      description: Which part of the system has the problem?
+      options:
+        - Student Registration
+        - Activity Display/Listing
+        - Teacher Login/Authentication
+        - Activity Management
+        - Search/Filtering
+        - Database/Data Storage
+        - User Interface
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: List the exact steps to reproduce this bug
+      placeholder: |
+        1. Go to the activities page
+        2. Click on "Morning Fitness"
+        3. Fill in student email: student@mergington.edu
+        4. Click "Register"
+        5. See error message...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: How urgently does this need to be fixed?
+      options:
+        - Critical (System completely broken, affecting all users)
+        - High (Major feature not working, affecting many users)
+        - Medium (Some functionality impacted, workaround available)
+        - Low (Minor issue, cosmetic problem)
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact on Teachers/Students
+      description: Who is affected and how?
+      placeholder: |
+        - How many students/teachers are affected?
+        - What activities or processes are disrupted?
+        - Any deadlines or events this impacts?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any other information that might help fix this bug
+      placeholder: |
+        - When did this start happening?
+        - Does this happen with specific activities only?
+        - Any recent changes you remember?
+        - Screenshots or error messages (if applicable)
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm you have done the following
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: I have provided clear steps to reproduce the issue
+          required: true
+        - label: I have described the expected behavior
+          required: true

@@ -1,0 +1,170 @@
+name: 🆘 Technical Help & Support
+description: Get help with system access, login issues, or technical questions
+title: "[HELP] "
+labels: ["support", "technical-help"]
+assignees: ["copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when you need help using the system, have questions about functionality,
+        or are experiencing technical difficulties that aren't clear bugs.
+
+  - type: dropdown
+    id: help-category
+    attributes:
+      label: Type of Help Needed
+      description: What kind of assistance do you need?
+      options:
+        - Login/Authentication Issues
+        - How to use a feature
+        - System access problems
+        - Training/Tutorial request
+        - Data export/import help
+        - Account setup/permissions
+        - System navigation questions
+        - Best practices guidance
+        - Other technical question
+    validations:
+      required: true
+
+  - type: textarea
+    id: question-description
+    attributes:
+      label: Describe Your Question or Issue
+      description: Explain what you're trying to do and where you're having difficulty
+      placeholder: |
+        Examples:
+        - "I can't log in - the system says my password is wrong but I'm sure it's correct"
+        - "How do I export a list of all students registered for activities?"
+        - "I need to update multiple activity schedules at once - is there a faster way?"
+        - "New teacher needs access to manage Drama Club - how do I set this up?"
+        - "Students are asking how to see what activities they're registered for"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-role
+    attributes:
+      label: Your Role
+      description: What is your role in the school?
+      options:
+        - Teacher/Activity Supervisor
+        - Administrative Staff
+        - Principal/Vice Principal
+        - IT Support
+        - Substitute Teacher
+        - Student
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: experience-level
+    attributes:
+      label: Experience Level with System
+      description: How familiar are you with using this system?
+      options:
+        - New user (first time using the system)
+        - Beginner (used a few times, still learning)
+        - Intermediate (comfortable with basic features)
+        - Advanced (familiar with most features)
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-taken
+    attributes:
+      label: What Have You Tried?
+      description: What steps have you already attempted?
+      placeholder: |
+        Examples:
+        - "I tried resetting my password using the 'Forgot Password' link"
+        - "I looked through all the menu options but can't find the export feature"
+        - "I asked a colleague but they weren't sure either"
+        - "I tried logging out and logging back in"
+        - "This is my first attempt - I'm not sure where to start"
+
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: What Are You Trying to Accomplish?
+      description: What is your end goal or what do you need to achieve?
+      placeholder: |
+        Examples:
+        - "Get a list of all Chess Club members to email parents about schedule change"
+        - "Set up my account so I can manage the new Photography Club"
+        - "Help students understand how to check their registration status"
+        - "Create a report showing which activities are most popular"
+        - "Allow students to register for weekend activities"
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: How Urgent Is This?
+      description: What's your timeline for getting this resolved?
+      options:
+        - Critical (blocking daily work, need help immediately)
+        - High (needed within 1-2 days for important task)
+        - Medium (would like help within a week)
+        - Low (whenever convenient, not time-sensitive)
+    validations:
+      required: true
+
+  - type: input
+    id: contact-preference
+    attributes:
+      label: Preferred Contact Method
+      description: How would you like to receive help?
+      placeholder: "Example: Email, phone call, in-person meeting, written instructions"
+
+  - type: textarea
+    id: system-details
+    attributes:
+      label: System/Technical Details
+      description: Any relevant technical information
+      placeholder: |
+        - What device are you using? (Windows laptop, iPad, iPhone, etc.)
+        - Which web browser? (Chrome, Firefox, Safari, Edge)
+        - Any error messages you've seen?
+        - Screenshots of the issue (if applicable)
+        - When did this problem start?
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might be helpful
+      placeholder: |
+        - Is this affecting other teachers too?
+        - Are there specific deadlines or events this relates to?
+        - Have you used similar systems before?
+        - Any special requirements or constraints?
+
+  - type: checkboxes
+    id: help-format
+    attributes:
+      label: Preferred Help Format
+      description: How would you like to receive assistance? (Select all that apply)
+      options:
+        - label: Step-by-step written instructions
+        - label: Screen-sharing session/video call
+        - label: In-person training
+        - label: Quick reference guide/cheat sheet
+        - label: Video tutorial
+        - label: Email support with screenshots
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following
+      options:
+        - label: I have clearly described what I'm trying to accomplish
+          required: true
+        - label: I have explained what I've already tried
+          required: true
+        - label: I have indicated my experience level and urgency
+          required: true
+        - label: I understand this is for getting help, not reporting bugs
+          required: true

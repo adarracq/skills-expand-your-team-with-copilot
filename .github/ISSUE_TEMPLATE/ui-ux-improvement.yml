@@ -1,0 +1,185 @@
+name: 🎨 UI/UX Improvement
+description: Request improvements to the user interface or user experience
+title: "[UI/UX] "
+labels: ["enhancement", "ui/ux", "user-experience"]
+assignees: ["copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request improvements to how the system looks or how users interact with it.
+        This includes making the system easier to use, more accessible, or more visually appealing.
+
+  - type: dropdown
+    id: page-area
+    attributes:
+      label: Page/Area Affected
+      description: Which part of the system needs UI/UX improvements?
+      options:
+        - Main Activities Page (student view)
+        - Activity Registration Form
+        - Teacher Login Page
+        - Activity Search/Filtering
+        - Activity Details Display
+        - User Dashboard/Profile
+        - Navigation Menu
+        - Mobile/Responsive Design
+        - Entire System (general improvements)
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: improvement-type
+    attributes:
+      label: Type of Improvement
+      description: What kind of improvement is this?
+      options:
+        - Accessibility (screen readers, keyboard navigation, color contrast)
+        - Mobile/Tablet Responsiveness
+        - Visual Design (colors, fonts, layout)
+        - Usability (easier navigation, clearer buttons)
+        - Performance (faster loading, smoother interactions)
+        - Information Organization (better content layout)
+        - Error Messages/Feedback
+        - Form Design/User Input
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-issue
+    attributes:
+      label: Current Issue/Problem
+      description: What is currently confusing, difficult, or problematic for users?
+      placeholder: |
+        Examples:
+        - "Students can't easily see which activities have spots available"
+        - "The registration form is too long and intimidating"
+        - "Activity schedule information is hard to read on mobile phones"
+        - "Teachers can't quickly find specific activities when there are many listed"
+        - "Error messages don't clearly explain what went wrong"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: Proposed Improvement
+      description: How would you like this to be improved?
+      placeholder: |
+        Examples:
+        - "Add a visual indicator (like a green dot) next to activities with available spots"
+        - "Break the registration form into smaller steps with progress indicator"
+        - "Make activity cards bigger and easier to tap on mobile devices"
+        - "Add a search box that filters activities as you type"
+        - "Show specific, helpful error messages with suggestions for fixing the problem"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-affected
+    attributes:
+      label: Primary Users Affected
+      description: Who would benefit most from this improvement?
+      options:
+        - Students
+        - Teachers/Staff
+        - Both Students and Teachers
+        - Parents/Guardians
+        - System Administrators
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-impact
+    attributes:
+      label: Impact on Users
+      description: How will this improvement help users accomplish their goals?
+      placeholder: |
+        Examples:
+        - "Students will be able to find and register for activities 50% faster"
+        - "Teachers will make fewer mistakes when entering activity information"
+        - "Students with visual impairments will be able to use the system independently"
+        - "Mobile users will have the same experience as desktop users"
+        - "New users will understand how to use the system without training"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-workaround
+    attributes:
+      label: Current Workaround
+      description: How are users currently dealing with this issue?
+      placeholder: |
+        Examples:
+        - "Students have to call the office to check availability"
+        - "Teachers help students register because the form is too confusing"
+        - "Mobile users switch to desktop computers to use the system"
+        - "Users abandon registration if they encounter errors"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this improvement?
+      options:
+        - Critical (system is difficult/impossible to use)
+        - High (significantly impacts user experience)
+        - Medium (noticeable improvement for users)
+        - Low (minor enhancement)
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success Criteria
+      description: How will you know this improvement was successful?
+      placeholder: |
+        Examples:
+        - "Students can complete registration in under 2 minutes"
+        - "Error rate during registration drops by 75%"
+        - "System passes accessibility compliance tests"
+        - "Mobile usage increases because the experience is better"
+        - "Teachers report the system is easier to use"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that would help implement this improvement?
+      placeholder: |
+        - Screenshots or examples of the current problem
+        - Examples of good design from other systems
+        - Specific user feedback or complaints received
+        - Accessibility requirements or standards to meet
+        - Device/browser compatibility considerations
+
+  - type: checkboxes
+    id: considerations
+    attributes:
+      label: Design Considerations
+      description: Please consider and check all that apply
+      options:
+        - label: This improvement should work well on mobile devices
+        - label: This improvement should be accessible to users with disabilities
+        - label: This improvement should maintain consistency with the current design
+        - label: This improvement should not make the system more complex for other users
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following
+      options:
+        - label: I have clearly described the current problem or difficulty
+          required: true
+        - label: I have proposed a specific improvement solution
+          required: true
+        - label: I have considered how this affects different types of users
+          required: true
+        - label: I have provided criteria for measuring success
+          required: true

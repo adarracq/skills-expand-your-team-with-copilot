@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 General School Questions
+    url: mailto:office@mergington.edu
+    about: For general questions about school policies, enrollment, or administrative matters
+  - name: 🔧 System Administrator
+    url: mailto:it@mergington.edu  
+    about: For immediate technical emergencies or system outages
+  - name: 📖 User Documentation
+    url: https://github.com/adarracq/skills-expand-your-team-with-copilot/blob/main/docs/how-to-develop.md
+    about: Learn how the system works and view technical documentation

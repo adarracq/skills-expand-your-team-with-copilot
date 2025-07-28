@@ -1,0 +1,179 @@
+name: 💡 Feature Request
+description: Request a new feature or enhancement to the system functionality
+title: "[FEATURE] "
+labels: ["enhancement", "feature-request"]
+assignees: ["copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request new features or enhancements to the Activities Management System.
+        Think about how this feature will help teachers and students use the system more effectively.
+
+  - type: input
+    id: feature-title
+    attributes:
+      label: Feature Title
+      description: Give your feature request a clear, descriptive title
+      placeholder: "Example: Email notifications for activity updates, Export student roster to Excel"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Need
+      description: What problem does this feature solve? What need does it address?
+      placeholder: |
+        Example:
+        "Currently, when activity schedules change, there's no way to automatically notify all registered students. Teachers have to manually contact each student, which is time-consuming and error-prone."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe your proposed feature in detail
+      placeholder: |
+        Example:
+        "Add an email notification system that automatically sends emails to all registered students when:
+        - Activity schedule changes
+        - Activity is cancelled
+        - Important announcements are made
+        - Registration deadlines approach"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: Primary Users
+      description: Who would primarily use this feature?
+      options:
+        - Teachers/Staff
+        - Students
+        - Both Teachers and Students
+        - System Administrators
+        - Parents/Guardians
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature Category
+      description: What type of feature is this?
+      options:
+        - Communication (notifications, messaging)
+        - Reporting (exports, analytics, summaries)
+        - User Interface (design, navigation, accessibility)
+        - Activity Management (scheduling, organization)
+        - Student Management (registration, tracking)
+        - Authentication/Security (login, permissions)
+        - Data Management (import/export, backup)
+        - Integration (with other school systems)
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: Write a user story describing how this feature would be used
+      placeholder: |
+        Format: "As a [type of user], I want [goal/feature] so that [benefit/reason]"
+        
+        Examples:
+        - "As a teacher, I want to send email notifications to all students in my activity so that they're immediately informed of schedule changes."
+        - "As a student, I want to receive email confirmations when I register for activities so that I know my registration was successful."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What specific conditions must be met for this feature to be considered complete?
+      placeholder: |
+        Example:
+        - [ ] Teachers can compose and send emails to all students in an activity
+        - [ ] Students receive emails with clear subject lines and activity names
+        - [ ] Email template includes activity name, date, time, and location
+        - [ ] System tracks which emails were sent successfully
+        - [ ] Teachers can see delivery confirmation
+        - [ ] Emails are sent from the school domain
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature?
+      options:
+        - Critical (essential for daily operations)
+        - High (significantly improves efficiency)
+        - Medium (useful enhancement)
+        - Low (nice to have)
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: What other approaches have you considered? How are you currently handling this need?
+      placeholder: |
+        Example:
+        "Currently we:
+        - Send individual emails manually (very time-consuming)
+        - Post announcements on bulletin boards (students often miss them)
+        - Make phone calls to parents (not efficient for large groups)
+        
+        Other possible solutions considered:
+        - Text message notifications (but not all students have phones)
+        - School website announcements (but students don't check regularly)"
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected Impact
+      description: How will this feature benefit teachers and students?
+      placeholder: |
+        Example:
+        - Save teachers 2-3 hours per week on communication tasks
+        - Ensure 100% of students receive important activity updates
+        - Reduce confusion about schedule changes
+        - Improve overall activity participation and engagement
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-considerations
+    attributes:
+      label: Technical Considerations
+      description: Any technical requirements, limitations, or concerns you're aware of?
+      placeholder: |
+        Examples:
+        - Should integrate with existing school email system
+        - Must comply with student privacy policies
+        - Needs to work on mobile devices
+        - Should have unsubscribe option for parents
+        - Consider email delivery limits
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following
+      options:
+        - label: I have clearly described the problem this feature would solve
+          required: true
+        - label: I have provided specific acceptance criteria
+          required: true
+        - label: I have considered how this affects both teachers and students
+          required: true
+        - label: I have checked if similar functionality already exists
+          required: true

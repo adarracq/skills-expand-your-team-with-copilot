@@ -1,0 +1,157 @@
+name: ✏️ Modify Existing Activity
+description: Request changes to an existing activity's details, schedule, or settings
+title: "[MODIFY] "
+labels: ["enhancement", "activity-modification"]
+assignees: ["copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request changes to an existing activity in the system.
+        Be specific about what needs to change and provide the new information.
+
+  - type: dropdown
+    id: activity-name
+    attributes:
+      label: Activity to Modify
+      description: Which activity needs to be changed?
+      options:
+        - Chess Club
+        - Programming Class
+        - Morning Fitness
+        - Soccer Team
+        - Basketball Team
+        - Art Club
+        - Drama Club
+        - Math Club
+        - Debate Team
+        - Weekend Robotics Workshop
+        - Science Olympiad
+        - Sunday Chess Tournament
+        - Manga Maniacs
+        - Other (specify in details below)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: changes-needed
+    attributes:
+      label: What needs to be changed?
+      description: Select all that apply
+      options:
+        - label: Activity description
+        - label: Schedule (days/times)
+        - label: Maximum participants
+        - label: Location/room
+        - label: Supervisor/teacher
+        - label: Category
+        - label: Student requirements
+        - label: Other (specify below)
+
+  - type: textarea
+    id: current-details
+    attributes:
+      label: Current Activity Details
+      description: What are the current details that need to change?
+      placeholder: |
+        Example:
+        Current schedule: Mondays and Fridays, 3:15 PM - 4:45 PM
+        Current capacity: 12 students
+        Current location: Room 101
+        Current description: Learn strategies and compete in tournaments
+    validations:
+      required: true
+
+  - type: textarea
+    id: new-details
+    attributes:
+      label: Requested New Details
+      description: What should the new details be?
+      placeholder: |
+        Example:
+        New schedule: Tuesdays and Thursdays, 3:30 PM - 5:00 PM
+        New capacity: 20 students
+        New location: Room 205
+        New description: Learn advanced strategies, compete in tournaments, and teach younger students
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Changes
+      description: Why are these changes needed?
+      placeholder: |
+        Examples:
+        - Room 101 is no longer available due to renovations
+        - Increased student interest requires higher capacity
+        - Teacher schedule changed
+        - Activity curriculum has been updated
+        - Student feedback requested different meeting times
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: When do these changes need to take effect?
+      description: Timing for implementing the changes
+      options:
+        - Immediately (urgent)
+        - Within 1 week
+        - Within 2 weeks
+        - Next month
+        - Next semester
+        - Flexible timing
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact on Current Participants
+      description: How will these changes affect students already registered?
+      placeholder: |
+        - How many students are currently registered?
+        - Will all current students be able to continue?
+        - Do we need to notify students about the changes?
+        - Are there any conflicts with other activities?
+    validations:
+      required: true
+
+  - type: input
+    id: approval
+    attributes:
+      label: Approval/Authorization
+      description: Who approved these changes?
+      placeholder: "Example: Principal Martinez, Department Head, Activity Supervisor"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other relevant details or special considerations?
+      placeholder: |
+        - Any equipment or resource changes needed?
+        - Budget implications?
+        - Scheduling conflicts to be aware of?
+        - Special instructions for implementation?
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following
+      options:
+        - label: I have clearly identified the activity that needs modification
+          required: true
+        - label: I have specified exactly what changes are needed
+          required: true
+        - label: I have explained the reason for these changes
+          required: true
+        - label: I have considered the impact on current participants
+          required: true
+        - label: I have obtained necessary approvals for these changes
+          required: true

@@ -1,0 +1,169 @@
+name: 🎯 New Activity Request
+description: Request to add a new extracurricular activity to the system
+title: "[NEW ACTIVITY] "
+labels: ["enhancement", "new-activity"]
+assignees: ["copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request a new extracurricular activity be added to the system.
+        Please provide as much detail as possible to ensure the activity is set up correctly.
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: What is the name of the new activity?
+      placeholder: "Example: Photography Club, Volleyball Team, Science Fair Prep"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Activity Description
+      description: Provide a detailed description that students will see
+      placeholder: |
+        Write a description that explains:
+        - What students will do in this activity
+        - What skills they will learn or practice
+        - Any special equipment or materials needed
+        - Prerequisites or requirements for joining
+      value: ""
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Activity Category
+      description: Which category best fits this activity?
+      options:
+        - Sports
+        - Arts
+        - Academic
+        - Community
+        - Technology
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: schedule-days
+    attributes:
+      label: Meeting Days
+      description: Which days will this activity meet?
+      options:
+        - label: Monday
+        - label: Tuesday
+        - label: Wednesday
+        - label: Thursday
+        - label: Friday
+        - label: Saturday
+        - label: Sunday
+
+  - type: input
+    id: start-time
+    attributes:
+      label: Start Time
+      description: What time does the activity start?
+      placeholder: "Example: 3:15 PM, 7:00 AM, 10:00 AM"
+    validations:
+      required: true
+
+  - type: input
+    id: end-time
+    attributes:
+      label: End Time
+      description: What time does the activity end?
+      placeholder: "Example: 4:45 PM, 8:00 AM, 12:00 PM"
+    validations:
+      required: true
+
+  - type: input
+    id: max-participants
+    attributes:
+      label: Maximum Participants
+      description: How many students can participate in this activity?
+      placeholder: "Example: 15, 20, 30"
+    validations:
+      required: true
+
+  - type: input
+    id: supervisor
+    attributes:
+      label: Activity Supervisor/Teacher
+      description: Who will supervise or teach this activity?
+      placeholder: "Example: Ms. Johnson, Mr. Smith, Coach Williams"
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location/Room
+      description: Where will this activity take place?
+      placeholder: |
+        Example: 
+        - Room 205
+        - Gymnasium
+        - Library
+        - Art Room
+        - Computer Lab
+        - Outdoor field
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Student Requirements
+      description: Are there any requirements for students to join?
+      placeholder: |
+        Examples:
+        - Minimum GPA requirement
+        - Previous experience needed
+        - Permission form required
+        - Equipment students must bring
+        - Age or grade restrictions
+        - None
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Implementation Priority
+      description: How soon do you need this activity added?
+      options:
+        - Urgent (needed within 1 week)
+        - High (needed within 2 weeks)
+        - Medium (needed within 1 month)
+        - Low (can wait, but please add when convenient)
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Information
+      description: Any other details that would help set up this activity?
+      placeholder: |
+        - When do you want to start accepting registrations?
+        - Any special considerations or notes?
+        - Budget or resource requirements?
+        - Connection to school curriculum or goals?
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following
+      options:
+        - label: I have checked that this activity doesn't already exist in the system
+          required: true
+        - label: I have provided all required information (name, description, schedule, capacity)
+          required: true
+        - label: I have confirmed the supervisor/teacher is available for the specified times
+          required: true
+        - label: The location/room is available during the specified times
+          required: true
